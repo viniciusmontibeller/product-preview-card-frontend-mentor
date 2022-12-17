@@ -1,0 +1,116 @@
+body{
+    background-color: var(--primary-soft);
+    font-family: 'Montserrat', sans-serif;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-card{
+    width: 600px;
+    height: 450px;
+    background-color: var(--neutral-soft);
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.preview-card .perfume-image img {
+    height: 100%;
+}
+
+.preview-card .info{
+    margin: 31px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.preview-card .info .perfume{
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: var(--neutral-medium);
+}
+
+.preview-card .info .perfume-name{
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 900;
+    font-family: 'Fraunces', serif;
+}
+
+.preview-card .info .perfume-description{
+    color: var(--neutral-medium);
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.preview-card .info .price {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+}
+
+.preview-card .info .price .promo{
+    font-size: 32px;
+    font-family: 'Fraunces', serif;
+    color: var(--primary-medium);
+}
+
+.preview-card .info .price .original-price{
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--neutral-medium);
+    text-decoration: line-through;
+}
+
+.preview-card .info .btn-cart{
+    background-color: var(--primary-medium);
+    padding: 15px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-card .info .btn-cart:hover{
+    background-color: var(--neutral-dark);
+    cursor: pointer;
+}
+
+.preview-card .info .btn-cart a{
+    color: var(--neutral-soft);
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.preview-card .info .btn-cart::before{
+    content: '';
+    background: url(../images/icon-cart.svg) no-repeat center;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+}
+
+@media(max-width: 620px){
+    .preview-card{
+        flex-direction: column;
+        width: 343px;
+        height: 612px;
+    }
+    
+    .preview-card .perfume-image{
+        height: 240px;
+    }
+
+    .preview-card .info{
+        margin: 24px;
+        height: 100%;
+    }
+}
